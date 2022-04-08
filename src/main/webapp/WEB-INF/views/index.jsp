@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인페이지</title>
+<title>스타터팩입니다</title>
 
 <style>
 html, body {
