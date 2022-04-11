@@ -10,9 +10,9 @@ public class Individual {
 	private int draw;
 	private int rate;
 	// 외래키
-	private int user_user_code;
+	private int member_code;
 	// session
-	private String user_user_name;
+	private String member_name;
 
 	public int getIndividual_code() {
 		return individual_code;
@@ -77,22 +77,21 @@ public class Individual {
 	public void setRate(int rate) {
 		this.rate = rate;
 	}
-	// 외래키
-	public int getUser_user_code() {
-		return user_user_code;
-	}
-	
-	public void setUser_user_code(int user_user_code) {
-		this.user_user_code = user_user_code;
-	}
-	// session
-	public String getUser_user_name() {
-		return user_user_name;
+
+	public int getMember_code() {
+		return member_code;
 	}
 
-	public void setUser_user_name(String user_user_name) {
-		this.user_user_name = user_user_name;
+	public void setMember_code(int member_code) {
+		this.member_code = member_code;
 	}
-	
-	
+
+	public String getMember_name() {
+		return member_name;
+	}
+
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+
 }

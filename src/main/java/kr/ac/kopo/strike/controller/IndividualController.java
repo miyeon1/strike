@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import kr.ac.kopo.strike.model.Individual;
-import kr.ac.kopo.strike.model.User_User;
+import kr.ac.kopo.strike.model.Member;
 import kr.ac.kopo.strike.service.IndividualService;
 
 @Controller
@@ -30,18 +30,18 @@ public class IndividualController {
 		List<Individual> list = service.list();
 		
 		model.addAttribute("list", list);
-		
+
 		return path + "list";
 	}
 	
 	@GetMapping("/add")
-	public String add(@SessionAttribute User_User user, Individual individual) {
+	public String add(@SessionAttribute Member member, Individual individual) {
 		
 		individual.setClan("클랜없음");
 		individual.setTier("아이언");
-		individual.setUser_user_code(user.getUser_code()); 
-		individual.setUser_user_name(user.getName());
-		
+		individual.setMember_code(member.getMember_code()); 
+		individual.setMember_name(member.getName());
+
 		service.add(individual);
 		
 		return "redirect:list";

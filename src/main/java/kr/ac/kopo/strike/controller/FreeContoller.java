@@ -8,20 +8,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.ac.kopo.strike.model.SuggestFree;
-import kr.ac.kopo.strike.service.SuggestFreeService;
+import kr.ac.kopo.strike.model.Free;
+import kr.ac.kopo.strike.service.FreeService;
 
 @Controller
-@RequestMapping("/suggestfree")
-public class SuggestFreeContoller {
-	final String path = "suggestfree/";
+@RequestMapping("/free")
+public class FreeContoller {
+	final String path = "free/";
 	
 	@Autowired
-	SuggestFreeService service;
+	FreeService service;
 	
 	@GetMapping("list")
 	public String list(Model model) {
-		List<SuggestFree> list = service.list();
+		List<Free> list = service.list();
 				
 		model.addAttribute("list", list);
 		

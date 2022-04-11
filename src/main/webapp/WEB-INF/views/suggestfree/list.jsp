@@ -30,8 +30,8 @@
 						<tr>
 							<td>${status.count}</td>
 							<td>${item.title}</td>
-							<td><a href="enter/${item.suggestfree_code}">입장</a></td>
-							<td><a href="delete/${item.suggestfree_code}">삭제</a></td>
+							<td><a href="enter/${item.free_code}">입장</a></td>
+							<td><a href="delete/${item.free_code}">삭제</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

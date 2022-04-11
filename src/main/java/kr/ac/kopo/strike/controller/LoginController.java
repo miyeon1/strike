@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.ac.kopo.strike.model.User_User;
+import kr.ac.kopo.strike.model.Member;
 import kr.ac.kopo.strike.service.LoginService;
 
 @Controller
@@ -26,12 +26,12 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	String login(String id, String pw, HttpSession session) {
-		User_User user = service.check(id, pw);
+		Member member = service.check(id, pw);
 
-		if(user == null) {
+		if(member == null) {
 			return "redirect:/login/login?wrong=true";
 		} else {
-			session.setAttribute("user", user);
+			session.setAttribute("member", member);
 			return "redirect:/";
 		}
 	}

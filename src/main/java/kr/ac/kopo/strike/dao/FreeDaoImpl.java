@@ -6,17 +6,17 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.ac.kopo.strike.model.SuggestFree;
+import kr.ac.kopo.strike.model.Free;
 
 @Repository
-public class SuggestFreeDaoImpl implements SuggestFreeDao {
+public class FreeDaoImpl implements FreeDao {
 
 	@Autowired
 	SqlSession sql;
 	
 	@Override
-	public List<SuggestFree> list() {
-		return sql.selectList("suggestfree.list");
+	public List<Free> list() {
+		return sql.selectList("free.list");
 	}
 
 }
