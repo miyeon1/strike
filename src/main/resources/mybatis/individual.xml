@@ -9,7 +9,7 @@
 	
 	<insert id="add">
 		INSERT INTO individual
-		VALUES (INDIVIDUAL_CODE_SEQ.nextval, #{name}, #{clan}, #{tier}, #{record}, #{win}, #{lose}, #{draw}, #{rate})
+		VALUES (INDIVIDUAL_CODE_SEQ.nextval, #{user_user_code}, #{user_user_name}, #{clan}, #{tier}, #{record}, #{win}, #{lose}, #{draw}, #{rate})
 	</insert>
 	
 	<delete id="delete">

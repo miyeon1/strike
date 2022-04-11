@@ -12,7 +12,7 @@
 		<form method="post">
 			<div>
 				<label>이름:</label>
-				<input name="name" type="text"><!-- input name??? -->
+				<input name="name" type="text"></div>
 			</div>
 			<div>
 				<label>클랜:</label>

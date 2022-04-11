@@ -2,6 +2,8 @@ package kr.ac.kopo.strike.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import kr.ac.kopo.strike.model.Individual;
+import kr.ac.kopo.strike.model.User_User;
 import kr.ac.kopo.strike.service.IndividualService;
 
 @Controller
@@ -31,14 +35,14 @@ public class IndividualController {
 	}
 	
 	@GetMapping("/add")
-	public String add() {
+	public String add(@SessionAttribute User_User user, Individual individual) {
 		
-		return path + "add";
-	}
-	
-	@PostMapping("/add")
-	public String add(Individual item) {		
-		service.add(item);
+		individual.setClan("클랜없음");
+		individual.setTier("아이언");
+		individual.setUser_user_code(user.getUser_code()); 
+		individual.setUser_user_name(user.getName());
+		
+		service.add(individual);
 		
 		return "redirect:list";
 	}

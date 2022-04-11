@@ -31,8 +31,7 @@ public class LoginController {
 		if(user == null) {
 			return "redirect:/login/login?wrong=true";
 		} else {
-			session.setAttribute("code", user.getUser_code());
-			session.setAttribute("name", user.getName());
+			session.setAttribute("user", user);
 			return "redirect:/";
 		}
 	}
