@@ -3,19 +3,19 @@ package kr.ac.kopo.strike.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.ac.kopo.strike.dao.UserDao;
-import kr.ac.kopo.strike.model.User_User;
+import kr.ac.kopo.strike.dao.MemberDao;
+import kr.ac.kopo.strike.model.Member;
 import kr.co.kopo.strike.util.AES256Util;
 import kr.co.kopo.strike.util.SHA256Util;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class MemberServiceImpl implements MemberService {
 	
 	AES256Util aes256 = new AES256Util();
 	SHA256Util sha256 = new SHA256Util();
 	
 	@Autowired
-	UserDao dao;
+	MemberDao dao;
 	
 	@Override
 	public boolean confirm(String id) {
@@ -32,16 +32,16 @@ public class UserServiceImpl implements UserService {
 			}
 
 	@Override
-	public void add(User_User user) {
+	public void add(Member member) {
 		
-		user.setId(aes256.encrypt(user.getId())); 
-		user.setName(aes256.encrypt(user.getName()));
-		user.setBirth(aes256.encrypt(user.getBirth()));
-		user.setTel(aes256.encrypt(user.getTel()));
+		member.setId(aes256.encrypt(member.getId())); 
+		member.setName(aes256.encrypt(member.getName()));
+		member.setBirth(aes256.encrypt(member.getBirth()));
+		member.setTel(aes256.encrypt(member.getTel()));
 		
-		user.setPw(sha256.encrypt(user.getPw()));
+		member.setPw(sha256.encrypt(member.getPw()));
 		
-		dao.add(user);
+		dao.add(member);
 	}
 
 }

@@ -5,17 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.ac.kopo.strike.dao.SuggestFreeDao;
-import kr.ac.kopo.strike.model.SuggestFree;
+import kr.ac.kopo.strike.dao.FreeDao;
+import kr.ac.kopo.strike.model.Free;
 
 @Service
-public class SuggestFreeServiceImpl implements SuggestFreeService {
+public class FreeServiceImpl implements FreeService {
 
 	@Autowired
-	SuggestFreeDao dao;
+	FreeDao dao;
 	
 	@Override
-	public List<SuggestFree> list() {
+	public List<Free> list() {
 		return dao.list();
 	}
 

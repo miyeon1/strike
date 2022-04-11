@@ -1,7 +1,7 @@
 package kr.ac.kopo.strike.model;
 
-public class User_User {
-	private int user_code;
+public class Member {
+	private int member_code;
 	private String id;
 	private String pw;
 	private String name;
@@ -9,12 +9,12 @@ public class User_User {
 	private int sex;
 	private String tel;
 
-	public int getUser_code() {
-		return user_code;
+	public int getMember_code() {
+		return member_code;
 	}
 
-	public void setUser_code(int user_code) {
-		this.user_code = user_code;
+	public void setMember_code(int member_code) {
+		this.member_code = member_code;
 	}
 
 	public String getId() {
