@@ -15,6 +15,10 @@
 				<tr>
 					<th>팀명</th>
 					<th>회원 아이디</th>
+					<th>전적</th>
+					<th>승리</th>
+					<th>패배</th>
+					<th>점수</th>
 					<th>상세보기</th>
 					<th>관리</th>
 				</tr>
@@ -31,6 +35,10 @@
 				<tr>
 					<td>${item.clanName }</td>
 					<td>${item.memId }</td>
+					<td>${item.clanCount }</td>
+					<td>${item.clanWin }</td>
+					<td>${item.clanLost }</td>
+					<td>${item.clanScore }</td>
 					<td><a href="../detail/${item.clanName }">상세보기</a></td>
 					<td><a href="update/${item.clanName }">변경</a><a href="delete/${item.clanName }">삭제</a></td>
 				</tr>

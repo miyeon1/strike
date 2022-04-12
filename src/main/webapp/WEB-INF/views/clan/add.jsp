@@ -19,6 +19,22 @@
 			<label>회원 아이디</label>
 			<input name="memId" type="text">
 		</div>
+		<div>
+			<label>전적</label>
+			<input name="clanCount" type="text">
+		</div>
+		<div>
+			<label>승리</label>
+			<input name="clanWin" type="text">
+		</div>
+		<div>
+			<label>패배</label>
+			<input name="clanLost" type="text">
+		</div>
+		<div>
+			<label>점수</label>
+			<input name="clanScore" type="text">
+		</div>
 		<button>등록</button>
 		</form>
 	</div>
