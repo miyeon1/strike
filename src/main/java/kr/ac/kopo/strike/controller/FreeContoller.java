@@ -14,12 +14,12 @@ import kr.ac.kopo.strike.service.FreeService;
 @Controller
 @RequestMapping("/free")
 public class FreeContoller {
-	final String path = "free/";
+	final String path = "/free/";
 	
 	@Autowired
 	FreeService service;
 	
-	@GetMapping("list")
+	@GetMapping("/list")
 	public String list(Model model) {
 		List<Free> list = service.list();
 				

@@ -44,7 +44,7 @@ a.{
 			</c:if>
 			
 			<c:if test="${sessionScope.member == null}">
-				<span><a href="user/add" style="text-decoration:none">회원가입</a></span>
+				<span><a href="member/add" style="text-decoration:none">회원가입</a></span>
 			</c:if>
 		<!-- 로그인 후 -->	
 			<c:if test="${sessionScope.member != null}">
@@ -56,7 +56,7 @@ a.{
 			</c:if>
 			
 			<c:if test="${sessionScope.member != null}">
-				<span><a href="mypage/mypage/${sessionScope.member_code}" style="text-decoration:none">마이페이지</a></span>
+				<span><a href="myPage/myPage" style="text-decoration:none">마이페이지</a></span>
 			</c:if>
 		</div>
 	</div>
@@ -70,7 +70,7 @@ a.{
 		</div>
 		
 		<div>
-			<a href="individual/list" style="text-decoration:none">개인 </a><a href="suggestfree/list" style="text-decoration:none">자유게시판</a><a href="suggestmaster/list" style="text-decoration:none">공지게시판</a>
+			<a href="individual/list" style="text-decoration:none">개인 </a><a href="free/list" style="text-decoration:none">자유게시판</a><a href="master/list" style="text-decoration:none">공지게시판</a>
 		</div>
 	</div>
 		
