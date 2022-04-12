@@ -16,8 +16,8 @@
 			<input name="clanName" type="text">
 		</div>
 		<div>
-			<label>회원 아이디</label>
-			<input name="memId" type="text">
+			<label>회원 번호</label>
+			<input name="memberCode" type="text">
 		</div>
 		<div>
 			<label>전적</label>

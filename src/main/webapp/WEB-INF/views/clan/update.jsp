@@ -17,7 +17,7 @@
 		</div>
 		<div>
 			<label>회원 아이디</label>
-			<input name="memId" type="text" value="${item.memId }">
+			<input name="memberCode" type="text" value="${item.memId }">
 		</div>
 		<div>
 			<label>전적</label>

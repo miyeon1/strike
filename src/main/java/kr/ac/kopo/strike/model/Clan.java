@@ -2,7 +2,7 @@ package kr.ac.kopo.strike.model;
 
 public class Clan {
 	private String clanName;
-	private String memId;
+	private String memberCode;
 	private int clanCount;
 	private int clanWin;
 	private int clanLost;
@@ -40,12 +40,14 @@ public class Clan {
 	public void setClanName(String clanName) {
 		this.clanName = clanName;
 	}
-	public String getMemId() {
-		return memId;
+	public String getMemberCode() {
+		return memberCode;
 	}
-	public void setMemId(String memId) {
-		this.memId = memId;
+	public void setMemberCode(String memberCode) {
+		this.memberCode = memberCode;
 	}
+
+
 	
 	
 }

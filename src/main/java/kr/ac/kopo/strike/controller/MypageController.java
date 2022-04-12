@@ -17,7 +17,7 @@ import kr.ac.kopo.strike.service.MemberService;
 @Controller
 @RequestMapping("/mypage")
 public class MypageController {
-	final String path = "/mypage/";
+	final String path = "mypage/";
 	
 	@Autowired
 	MemberService memberService;
@@ -25,7 +25,7 @@ public class MypageController {
 	@Autowired
 	IndividualService individualService;
 	
-	@GetMapping("/{member_code}")
+	@GetMapping("/mypage/{member_code}")
 	public String mypage(Model model, HttpSession session, @PathVariable int member_code) {
 		
 		Member member = new Member();
@@ -37,7 +37,7 @@ public class MypageController {
 		model.addAttribute("member", member);
 		model.addAttribute("individual", individual);
 		
-		return path + "{member_code}";
+		return path + "mypage";
 	}
 	
 }

@@ -34,7 +34,7 @@
 			<c:forEach items="${list}" var="item">
 				<tr>
 					<td>${item.clanName }</td>
-					<td>${item.memId }</td>
+					<td>${item.memberCode }</td>
 					<td>${item.clanCount }</td>
 					<td>${item.clanWin }</td>
 					<td>${item.clanLost }</td>

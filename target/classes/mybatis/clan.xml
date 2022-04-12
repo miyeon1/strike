@@ -7,18 +7,18 @@
 	</select>
 	
 	<insert id="add">
-		INSERT INTO clan (clan_name,mem_id,clan_count,clan_win,clan_lost,clan_score)
-		VALUES (#{clanName}, #{memId}, #{clanCount}, #{clanWin}, #{clanLost}, #{clanScore})
+		INSERT INTO clan (clan_name,member_code,clan_count,clan_win,clan_lost,clan_score)
+		VALUES (#{clanName}, #{memberCode}, #{clanCount}, #{clanWin}, #{clanLost}, #{clanScore})
 	</insert>
 	
 	<select id="item" resultType="Clan">
 		SELECT * FROM clan
-		WHERE T_NAME = #{clanName}
+		WHERE clan_name = #{clanName}
 	</select>
 	
 	<update id="update">
 		UPDATE clan 
-		SET mem_id = #{memId},clan_count= #{clanCount},clan_win= #{clanWin},clan_lost= #{clanLost},clan_score= #{clanScore}
+		SET member_code = #{memberCode},clan_count= #{clanCount},clan_win= #{clanWin},clan_lost= #{clanLost},clan_score= #{clanScore}
 		WHERE clan_name = #{clanName}
 	</update>
 	
