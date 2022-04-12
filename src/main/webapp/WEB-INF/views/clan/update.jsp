@@ -20,6 +20,22 @@
 			<input name="memId" type="text" value="${item.memId }">
 		</div>
 		<div>
+			<label>전적</label>
+			<input name="clanCount" type="text" value="${item.clanCount }">
+		</div>
+		<div>
+			<label>승리</label>
+			<input name="clanWin" type="text" value="${item.clanWin }">
+		</div>
+		<div>
+			<label>패배</label>
+			<input name="clanLost" type="text" value="${item.clanLost }">
+		</div>
+		<div>
+			<label>점수</label>
+			<input name="clanScore" type="text" value="${item.clanScore }">
+		</div>
+		<div>
 			<button>변경</button>
 		</div>
 		</form>
