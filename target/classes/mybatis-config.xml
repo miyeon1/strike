@@ -14,7 +14,7 @@
 	
 	<mappers>
 		<mapper resource="mybatis/individual.xml" />
-				<mapper resource="mybatis/free.xml" />
+		<mapper resource="mybatis/free.xml" />
 		<mapper resource="mybatis/member.xml"/>
 		<mapper resource="mybatis/suggestfree.xml" />
 		<mapper resource="mybatis/user_user.xml"/>
