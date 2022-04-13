@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인</title>
+<title></title>
 
 <style>
 html, body {
@@ -70,10 +70,7 @@ a.{
 		</div>
 		
 		<div>
-			<a href="individual/list" style="text-decoration:none">개인</a>
-			<a href="free/list" style="text-decoration:none">자유게시판</a>
-			<a href="master/list" style="text-decoration:none">공지게시판</a>
-			<a href="iGame/list" style="text-decoration:none">개인전 신청</a>
+			<a href="game/list" style="text-decoration:none">개인전 신청</a>
 			<a href="clanGame/list" style="text-decoration:none">클랜전 신청</a>
 		</div>
 	</div>

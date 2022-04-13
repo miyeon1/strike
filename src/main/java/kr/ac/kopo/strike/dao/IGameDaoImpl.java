@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.ac.kopo.strike.model.IGame;
+import kr.ac.kopo.strike.model.Game;
 
 @Repository
 public class IGameDaoImpl implements IGameDao {
@@ -15,8 +15,8 @@ public class IGameDaoImpl implements IGameDao {
 	SqlSession sql;
 	
 	@Override
-	public List<IGame> list() {
-		return sql.selectList("iGame.list");
+	public List<Game> list() {
+		return sql.selectList("game.list");
 	}
 
 }
