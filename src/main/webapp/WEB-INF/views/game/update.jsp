@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<h1>개인 신청</h1>
+		<h1>개인 신청 수정</h1>
 		<form method="post">
 			<div>
 				<label>제목</label>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>개인 대결 리스트</title>
+<title></title>
 </head>
 <body>
 	<div>
@@ -14,28 +14,36 @@
 				<thead>
 					<tr>
 						<th>제목</th>
+						<th>위치</th>
 						<th>작성자</th>
 						<th>클랜</th>
 						<th>티어</th>
-						<th>삭제</th>	
+						<th>삭제</th>
+						<th>수정</th>	
 					</tr>
 				</thead>
 				
 				<tbody>
 					<c:if test="${list.size() < 1}">
 						<tr>
-							<td colspan="5">등록 된 개인 대결이 없습니다</td>
+							<td colspan="7">등록 된 개인 대결이 없습니다</td>
 						</tr>
 					</c:if>
 					<c:forEach items="${list}" var="item" varStatus="status">
 						<tr>
 							<td>${item.title}</td>
+							<td>${item.loc}</td>
 							<td>${item.name}</td>
 							<td>${item.clan}</td>
 							<td>${item.tier}</td>
 							<td>
 								<c:if test="${sessionScope.member != null}">
-									<a href="delete/${item.i_code}" style="text-decoration:none">삭제</a>
+									<a href="delete/${item.member_code}" style="text-decoration:none">삭제</a>
+								</c:if>
+							</td>
+							<td>
+								<c:if test="${sessionScope.member != null}">
+									<a href="update/${item.member_code}" style="text-decoration:none">수정</a>
 								</c:if>
 							</td>
 						</tr>

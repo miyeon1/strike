@@ -1,17 +1,17 @@
-package kr.ac.kopo.strike.service;
+package kr.ac.kopo.strike.dao;
 
 import java.util.List;
 
 import kr.ac.kopo.strike.model.Game;
 import kr.ac.kopo.strike.model.Member;
 
-public interface GameService {
+public interface GameDao {
 
 	List<Game> list();
 
 	void add(Game game);
 
-	void delete(int game_code);
+	void delete(int game);
 
 	void update(Game item);
 
