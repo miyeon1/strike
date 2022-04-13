@@ -22,4 +22,19 @@ public class MemberDaoImpl implements MemberDao {
 		sql.insert("member.add", member);
 	}
 
+	@Override
+	public Member item(int member_code) {
+		return sql.selectOne("member.item", member_code);
+	}
+
+	@Override
+	public void update(Member item) {
+		sql.update("member.update", item);
+	}
+
+	@Override
+	public void delete(int member_code) {
+		sql.delete("member.delete", member_code);
+	}
+
 }

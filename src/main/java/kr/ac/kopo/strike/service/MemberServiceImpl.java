@@ -44,4 +44,19 @@ public class MemberServiceImpl implements MemberService {
 		dao.add(member);
 	}
 
+	@Override
+	public Member item(int member_code) {
+		return dao.item(member_code);
+	}
+
+	@Override
+	public void update(Member item) {
+		dao.update(item);
+	}
+
+	@Override
+	public void delete(int member_code) {
+		dao.delete(member_code);
+	}
+
 }

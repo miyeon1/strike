@@ -8,4 +8,10 @@ public interface MemberService {
 
 	void add(Member member);
 
+	Member item(int member_code);
+
+	void update(Member item);
+
+	void delete(int member_code);
+
 }

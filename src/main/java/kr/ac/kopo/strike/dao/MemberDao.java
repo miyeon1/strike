@@ -8,4 +8,10 @@ public interface MemberDao {
 
 	int idCount(String id);
 
+	Member item(int member_code);
+
+	void update(Member item);
+
+	void delete(int member_code);
+
 }
