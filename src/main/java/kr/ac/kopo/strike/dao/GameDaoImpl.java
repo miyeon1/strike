@@ -40,4 +40,9 @@ public class GameDaoImpl implements GameDao {
 		return sql.selectOne("game.item", game_code);
 	}
 
+	@Override
+	public Game enter(int game_code) {
+		return sql.selectOne("game.enter", game_code);
+	}
+
 }

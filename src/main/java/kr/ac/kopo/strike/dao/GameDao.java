@@ -17,4 +17,6 @@ public interface GameDao {
 
 	Game item(int game_code);
 
+	Game enter(int game_code);
+
 }

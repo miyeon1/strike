@@ -59,7 +59,7 @@ public class GameController {
 		return "redirect:../list";
 	}
 	
-	@GetMapping("update/{game_code}")
+	@GetMapping("/update/{game_code}")
 	public String update(@PathVariable int game_code, Model model, Game game, Member member) {
 	
 		game.setMember_code(member.getMember_code());
@@ -71,11 +71,21 @@ public class GameController {
 		return path + "update";
 	}
 	
-	@PostMapping("update/{game_code}")
+	@PostMapping("/update/{game_code}")
 	public String update(@PathVariable int game_code, Game item) {
 		
 		service.update(item);
 		
 		return "redirect:../list";
+	}
+	
+	@GetMapping("/enter/{game_code}")
+	public String enter(@PathVariable int game_code, Model model) {
+		
+		Game game = service.enter(game_code);
+		
+		model.addAttribute("game", game);
+		
+		return path + "enter";
 	}
 }

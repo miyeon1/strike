@@ -40,4 +40,9 @@ public class GameServiceImpl implements GameService {
 		return dao.item(game_code);
 	}
 
+	@Override
+	public Game enter(int game_code) {
+		return dao.enter(game_code);
+	}
+
 }
