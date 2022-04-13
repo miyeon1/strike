@@ -6,11 +6,13 @@
 		<typeAlias type="kr.ac.kopo.strike.model.Individual" alias="Individual"/>
 		<typeAlias type="kr.ac.kopo.strike.model.Free" alias="Free"/>
 		<typeAlias type="kr.ac.kopo.strike.model.Member" alias="Member"/>
+		<typeAlias type="kr.ac.kopo.strike.model.IGame" alias="IGame"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mybatis/individual.xml" />
 		<mapper resource="mybatis/free.xml" />
 		<mapper resource="mybatis/member.xml"/>
+		<mapper resource="mybatis/iGame.xml"/>
 	</mappers>
 </configuration>
