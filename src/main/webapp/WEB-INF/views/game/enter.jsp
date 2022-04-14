@@ -8,10 +8,7 @@
 <body>
 	<form method="post">
 		<h3>${game.title}</h3>
-		<div><b>등록일 </b>${suggest.time}</div>
-		<hr style="border: solid 1px gray;">
-		<div>${suggest.story}</div>
-		<hr style="border: solid 1px gray;">
+		
 	</form>
 </body>
 </html>
