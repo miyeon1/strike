@@ -28,6 +28,7 @@
 					</c:if>
 					<c:forEach items="${list}" var="item" varStatus="status"> <!-- ${list} == var="item" -->
 						<tr>
+
 							<td>${item.freeCode}</td>
 							<td><a href="view/${item.freeCode}">${item.title}</a></td>
 							
