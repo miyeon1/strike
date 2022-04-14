@@ -17,6 +17,7 @@ import kr.ac.kopo.strike.model.Individual;
 import kr.ac.kopo.strike.model.Member;
 import kr.ac.kopo.strike.service.IndividualService;
 import kr.ac.kopo.strike.service.MemberService;
+import kr.co.kopo.strike.util.AES256Util;
 
 @Controller
 @RequestMapping("/mypage")
@@ -30,25 +31,29 @@ public class MypageController {
 	IndividualService individualService;
 	
 	@GetMapping("/mypage/{member_code}")
-	public String mypage(Model model, HttpSession session, @PathVariable int member_code) {
+	public String mypage(Member item,Model model, HttpSession session, @PathVariable int member_code) {
 		
-		Member member = new Member();
-		Individual individual = new Individual();
+//		Member member = new Member();
+//		Individual individual = new Individual();
+//		
+//		member.setMember_code((Integer) session.getAttribute("code"));
+//		individual.setIndividual_code((Integer) session.getAttribute("code"));
+//		
+//		model.addAttribute("member", member);
+//		model.addAttribute("individual", individual);
 		
-		member.setMember_code((Integer) session.getAttribute("code"));
-		individual.setIndividual_code((Integer) session.getAttribute("code"));
+		Member Mitem = memberService.mypage(item);
 		
-		
-		model.addAttribute("member", member);
-		model.addAttribute("individual", individual);
+		System.out.println(item.getName()+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		model.addAttribute("item", item);
 		
 		return path + "mypage";
 	}
 	
 	@GetMapping("/update/{member_code}")
-	public String update(@PathVariable int member_code, Model model) {
+	public String update(@PathVariable int member_code, Model model, Member member) {
 		
-		Member item = memberService.item(member_code);
+		Member item = memberService.item(member);
 		
 		model.addAttribute("item", item);
 		

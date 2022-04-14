@@ -56,7 +56,7 @@ a.{
 			</c:if>
 			
 			<c:if test="${sessionScope.member != null}">
-				<span><a href="mypage/mypage/${sessionScope.member_code}" style="text-decoration:none">마이페이지</a></span>
+				<span><a href="mypage/mypage/${sessionScope.member.member_code}" style="text-decoration:none">마이페이지</a></span>
 			</c:if>
 		</div>
 	</div>

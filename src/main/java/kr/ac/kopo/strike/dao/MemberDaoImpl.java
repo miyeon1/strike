@@ -23,8 +23,8 @@ public class MemberDaoImpl implements MemberDao {
 	}
 
 	@Override
-	public Member item(int member_code) {
-		return sql.selectOne("member.item", member_code);
+	public Member item(Member member) {
+		return sql.selectOne("member.item", member);
 	}
 
 	@Override
@@ -35,6 +35,12 @@ public class MemberDaoImpl implements MemberDao {
 	@Override
 	public void delete(int member_code) {
 		sql.delete("member.delete", member_code);
+	}
+
+	@Override
+	public Member mypage(Member item) {
+		System.out.println(item.getName()+")))))))))))))))))))))");
+		return sql.selectOne("member.mypage", item);
 	}
 
 }

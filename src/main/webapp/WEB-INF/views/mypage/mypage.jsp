@@ -6,6 +6,12 @@
 <title>마이페이지</title>
 </head>
 <body>
-
+	${item.member_code }
+	${item.id }
+<%-- 	${item.pw } --%>
+	${item.name }
+	${item.birth }
+	${item.sex }
+	${item.tel }
 </body>
 </html>
