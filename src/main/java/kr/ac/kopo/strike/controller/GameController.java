@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import kr.ac.kopo.strike.model.Game;
+import kr.ac.kopo.strike.model.GameMember;
 import kr.ac.kopo.strike.model.Member;
 import kr.ac.kopo.strike.service.GameService;
 
@@ -88,4 +89,14 @@ public class GameController {
 		
 		return path + "enter";
 	}
+	
+	@GetMapping("/memberlist/{game_member_code}")
+	public String memberList(@PathVariable int game_member_code, Model model) {
+		List<GameMember> list = service.memberList(game_member_code);
+		
+		model.addAttribute("list", list);
+		
+		return path + "list";
+	}
+	
 }

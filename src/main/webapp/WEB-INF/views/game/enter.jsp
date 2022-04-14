@@ -7,8 +7,11 @@
 </head>
 <body>
 	<form method="post">
-		<h3>${game.title}</h3>
-		
+		<div>${game.title}</div>
+		<div>${game.loc}</div>
+		<div>
+			<button>신청</button>
+		</div>
 	</form>
 </body>
 </html>
