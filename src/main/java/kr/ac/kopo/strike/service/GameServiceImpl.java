@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import kr.ac.kopo.strike.dao.GameDao;
 import kr.ac.kopo.strike.model.Game;
-import kr.ac.kopo.strike.model.GameMember;
-import kr.ac.kopo.strike.model.Member;
 
 @Service
 public class GameServiceImpl implements GameService {
@@ -39,16 +37,6 @@ public class GameServiceImpl implements GameService {
 	@Override
 	public Game item(int game_code) {
 		return dao.item(game_code);
-	}
-
-	@Override
-	public Game enter(int game_code) {
-		return dao.enter(game_code);
-	}
-
-	@Override
-	public List<GameMember> memberList(int game_member_code) {
-		return dao.memberList(game_member_code);
 	}
 
 }

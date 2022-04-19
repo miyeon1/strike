@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import kr.ac.kopo.strike.model.Game;
-import kr.ac.kopo.strike.model.GameMember;
 import kr.ac.kopo.strike.model.Member;
 import kr.ac.kopo.strike.service.GameService;
 
@@ -26,6 +25,7 @@ public class GameController {
 	
 	@GetMapping("/list")
 	public String list(Model model) {
+
 		List<Game> list = service.list();
 		
 		model.addAttribute("list", list);
@@ -35,7 +35,6 @@ public class GameController {
 	
 	@GetMapping("/add")
 	public String add() {
-		
 		return path + "add";
 	}
 	
@@ -43,9 +42,6 @@ public class GameController {
 	public String add(@SessionAttribute Member member, Game game) {
 		
 		game.setMember_code(member.getMember_code());
-		game.setName(member.getName());
-		game.setClan(member.getClan());
-		game.setTier(member.getTier());
 		
 		service.add(game);
 		
@@ -78,25 +74,6 @@ public class GameController {
 		service.update(item);
 		
 		return "redirect:../list";
-	}
-	
-	@GetMapping("/enter/{game_code}")
-	public String enter(@PathVariable int game_code, Model model) {
-		
-		Game game = service.enter(game_code);
-		
-		model.addAttribute("game", game);
-		
-		return path + "enter";
-	}
-	
-	@GetMapping("/memberlist/{game_member_code}")
-	public String memberList(@PathVariable int game_member_code, Model model) {
-		List<GameMember> list = service.memberList(game_member_code);
-		
-		model.addAttribute("list", list);
-		
-		return path + "list";
 	}
 	
 }

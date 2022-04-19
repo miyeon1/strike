@@ -3,12 +3,14 @@
 
 <mapper namespace="game">
 	<select id="list" resultType="Game">
-		SELECT * FROM game
+		SELECT *
+		FROM game
+		
 	</select>
 	
 	<insert id="add">
 		INSERT INTO game
-		VALUES (GAME_CODE_SEQ.nextval, #{member_code}, #{title}, #{name}, #{clan}, #{tier}, #{loc})
+		VALUES (GAME_CODE_SEQ.nextval, #{member_code}, #{title}, #{loc})
 	</insert>
 	
 	<delete id="delete">
@@ -25,9 +27,5 @@
 	<select id="item" resultType="Game">
 		SELECT * FROM game
 		WHERE game_code=#{game_code}
-	</select>
-	
-	<select id="enter" resultType="Game">
-		SELECT * FROM game WHERE game_code = #{game_code}
 	</select>
 </mapper>
